@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://cp0eg8vk35kyl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_anq5w"]
+font_size = 40
+font_color = Color(1, 1, 0, 1)
+outline_size = 3
+
+[node name="Start Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="TitleLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 128.0
+offset_right = 1088.0
+offset_bottom = 192.0
+text = "REPULSION"
+label_settings = SubResource("LabelSettings_anq5w")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 256.0
+offset_right = 1088.0
+offset_bottom = 576.0
+item_count = 1
+item_0/text = "Tutorial"
