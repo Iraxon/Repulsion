@@ -5,28 +5,29 @@ font_size = 40
 font_color = Color(1, 1, 0, 1)
 outline_size = 3
 
-[node name="Start Menu" type="Control"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 1152.0
-offset_bottom = 648.0
+[node name="Start Menu" type="CenterContainer"]
+offset_right = 285.0
+offset_bottom = 131.0
 
-[node name="TitleLabel" type="Label" parent="."]
-layout_mode = 0
-offset_left = 576.0
-offset_top = 128.0
-offset_right = 1088.0
-offset_bottom = 192.0
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="HSplitContainer" type="HSplitContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="VSplitContainer" type="VSplitContainer" parent="MarginContainer/HSplitContainer"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/HSplitContainer/VSplitContainer"]
+layout_mode = 2
 text = "REPULSION"
 label_settings = SubResource("LabelSettings_anq5w")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ItemList" type="ItemList" parent="."]
-layout_mode = 0
-offset_left = 576.0
-offset_top = 256.0
-offset_right = 1088.0
-offset_bottom = 576.0
-item_count = 1
-item_0/text = "Tutorial"
+[node name="ReferenceRect" type="ReferenceRect" parent="MarginContainer/HSplitContainer/VSplitContainer"]
+layout_mode = 2
