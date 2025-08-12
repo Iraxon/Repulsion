@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://bdnmv7kiko8bc"]
+[gd_scene load_steps=3 format=3 uid="uid://bdnmv7kiko8bc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cw7hm"]
+size = Vector2(16, 16)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_gykx5"]
 size = Vector2(16, 16)
 
 [node name="BaseTile" type="Node2D"]
@@ -10,3 +13,7 @@ size = Vector2(16, 16)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(8, 8)
 shape = SubResource("RectangleShape2D_cw7hm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(8, 8)
+texture = SubResource("PlaceholderTexture2D_gykx5")
