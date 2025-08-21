@@ -1,48 +1,57 @@
-[gd_scene load_steps=2 format=3 uid="uid://cp0eg8vk35kyl"]
+[gd_scene load_steps=4 format=3 uid="uid://cp0eg8vk35kyl"]
+
+[ext_resource type="Texture2D" uid="uid://sc48m6nq8yhq" path="res://Airlock-1.png.png" id="1_ijim7"]
+[ext_resource type="PackedScene" uid="uid://bdnmv7kiko8bc" path="res://map_element/base_tile.tscn" id="1_jh3a1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_anq5w"]
-font_size = 40
 font_color = Color(1, 1, 0, 1)
 
 [node name="Start Menu" type="CenterContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
 
-[node name="HSplitContainer" type="HSplitContainer" parent="MarginContainer"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+texture = ExtResource("1_ijim7")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="VSplitContainer" type="VSplitContainer" parent="MarginContainer/HSplitContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="TitleLabel" type="Label" parent="MarginContainer/HSplitContainer/VSplitContainer"]
+[node name="TitleLabel" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "REPULSION"
 label_settings = SubResource("LabelSettings_anq5w")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HSplitContainer/VSplitContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="TutorialButton" type="Button" parent="MarginContainer/HSplitContainer/VSplitContainer/VBoxContainer"]
+[node name="TutorialButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "TUTORIAL"
 
-[node name="CampaignButton" type="Button" parent="MarginContainer/HSplitContainer/VSplitContainer/VBoxContainer"]
+[node name="CampaignButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "CAMPAIGN"
 
-[node name="EndlessButton" type="Button" parent="MarginContainer/HSplitContainer/VSplitContainer/VBoxContainer"]
+[node name="EndlessButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "ENDLESS"
 
-[node name="MultiplayerButton" type="Button" parent="MarginContainer/HSplitContainer/VSplitContainer/VBoxContainer"]
+[node name="MultiplayerButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "MULTIPLAYER"
+
+[node name="BaseTile" parent="." instance=ExtResource("1_jh3a1")]

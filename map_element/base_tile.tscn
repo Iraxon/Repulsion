@@ -4,7 +4,7 @@
 size = Vector2(16, 16)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_gykx5"]
-size = Vector2(16, 16)
+size = Vector2(128, 128)
 
 [node name="BaseTile" type="Node2D"]
 
@@ -15,5 +15,5 @@ position = Vector2(8, 8)
 shape = SubResource("RectangleShape2D_cw7hm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(8, 8)
+position = Vector2(64, 64)
 texture = SubResource("PlaceholderTexture2D_gykx5")
