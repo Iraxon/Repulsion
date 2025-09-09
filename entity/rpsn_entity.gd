@@ -16,9 +16,3 @@ func act(delta: float, movement: Vector2, sprint: bool) -> void:
 		acceleration * delta
 	)
 	move_and_slide()
-	var count := get_slide_collision_count()
-	if (count > 0):
-		for i in count:
-			var collision := get_slide_collision(i)
-			print(collision.get_normal())
-			print(collision.get_collider())
