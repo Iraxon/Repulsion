@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://f2q6tvefi6ig"]
+
+[ext_resource type="Script" uid="uid://bh1cghsiha41n" path="res://entity/rpsn_entity.gd" id="1_e7ki4"]
+
+[sub_resource type="Gradient" id="Gradient_jdd6w"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_q200r"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_jdd6w"]
+width = 64
+height = 128
+color_ramp = SubResource("Gradient_jdd6w")
+noise = SubResource("FastNoiseLite_q200r")
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q200r"]
+radius = 8.0
+height = 48.0
+
+[node name="Operator" type="CharacterBody2D"]
+collision_layer = 0
+motion_mode = 1
+script = ExtResource("1_e7ki4")
+metadata/_custom_type_script = "uid://bh1cghsiha41n"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -64)
+texture = SubResource("NoiseTexture2D_jdd6w")
+
+[node name="MovementCollider" type="CollisionShape2D" parent="."]
+position = Vector2(0, -8)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_q200r")
