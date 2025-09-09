@@ -4,7 +4,7 @@ const MENU = preload("res://start_menu.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	add_child(MENU.instantiate())
+	var menu = MENU.instantiate()
 
 func handle_menu_choice(i: int):
 	pass
