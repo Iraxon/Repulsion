@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://cp0eg8vk35kyl"]
+[gd_scene load_steps=3 format=3 uid="uid://cp0eg8vk35kyl"]
 
 [ext_resource type="Texture2D" uid="uid://sc48m6nq8yhq" path="res://Airlock-1.png.png" id="1_ijim7"]
-[ext_resource type="PackedScene" uid="uid://bdnmv7kiko8bc" path="res://map_element/base_tile.tscn" id="1_jh3a1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_anq5w"]
 font_color = Color(1, 1, 0, 1)
@@ -53,5 +52,3 @@ text = "ENDLESS"
 [node name="MultiplayerButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "MULTIPLAYER"
-
-[node name="BaseTile" parent="." instance=ExtResource("1_jh3a1")]
