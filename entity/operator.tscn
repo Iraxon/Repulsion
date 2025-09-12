@@ -7,8 +7,8 @@
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_q200r"]
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_jdd6w"]
-width = 64
-height = 128
+width = 112
+height = 256
 color_ramp = SubResource("Gradient_jdd6w")
 noise = SubResource("FastNoiseLite_q200r")
 
@@ -23,7 +23,7 @@ script = ExtResource("1_e7ki4")
 metadata/_custom_type_script = "uid://bh1cghsiha41n"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -64)
+position = Vector2(0, -128)
 texture = SubResource("NoiseTexture2D_jdd6w")
 
 [node name="MovementCollider" type="CollisionShape2D" parent="."]

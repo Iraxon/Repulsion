@@ -1,14 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://c47oqwykvfymm"]
+[gd_scene load_steps=2 format=3 uid="uid://c47oqwykvfymm"]
 
 [ext_resource type="Script" uid="uid://ok6paer2ieuk" path="res://main.gd" id="1_apn85"]
-[ext_resource type="PackedScene" uid="uid://f2q6tvefi6ig" path="res://entity/operator.tscn" id="2_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://dbv54lemifg3k" path="res://entity/player_soul.tscn" id="3_h2yge"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_apn85")
-
-[node name="Operator" parent="." instance=ExtResource("2_0xm2m")]
-position = Vector2(705, 486)
-
-[node name="PlayerSoul" parent="." node_paths=PackedStringArray("target") instance=ExtResource("3_h2yge")]
-target = NodePath("../Operator")

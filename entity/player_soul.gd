@@ -1,12 +1,4 @@
-class_name RPSNSoul extends Node2D
-
-@export var target: RPSNEntity = null:
-	set(v):
-		if target != null:
-			target.update.disconnect(send_action)
-		if v != null:
-			v.update.connect(send_action)
-		target = v
+extends "res://entity/abstract_soul.gd"
 
 func _init(t: RPSNEntity = null):
 	if (t != null):
