@@ -1,16 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://f2q6tvefi6ig"]
+[gd_scene load_steps=4 format=3 uid="uid://f2q6tvefi6ig"]
 
 [ext_resource type="Script" uid="uid://bh1cghsiha41n" path="res://entity/rpsn_entity.gd" id="1_e7ki4"]
-
-[sub_resource type="Gradient" id="Gradient_jdd6w"]
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_q200r"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_jdd6w"]
-width = 112
-height = 256
-color_ramp = SubResource("Gradient_jdd6w")
-noise = SubResource("FastNoiseLite_q200r")
+[ext_resource type="Texture2D" uid="uid://cbss84x1yvkhp" path="res://entity/operator/Scan Sprite.png" id="2_e7ki4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q200r"]
 radius = 8.0
@@ -24,7 +15,7 @@ metadata/_custom_type_script = "uid://bh1cghsiha41n"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -128)
-texture = SubResource("NoiseTexture2D_jdd6w")
+texture = ExtResource("2_e7ki4")
 
 [node name="MovementCollider" type="CollisionShape2D" parent="."]
 position = Vector2(0, -8)

@@ -10,4 +10,4 @@ func send_action(delta: float) -> void:
 		Input.get_vector("Left", "Right", "Up", "Down"),
 		Input.is_action_pressed("Sprint")
 	)
-	self.global_transform = target.global_transform
+	self.global_transform = target.global_transform.translated(target.head_offset)

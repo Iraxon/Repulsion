@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhmj1k23rqc6i"]
+
+[sub_resource type="Gradient" id="Gradient_q200r"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_e7ki4"]
+gradient = SubResource("Gradient_q200r")
+width = 2048
+height = 2048
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0, 0)
+
+[node name="VisionSource" type="Node2D"]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0, 0, 0, 1)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_e7ki4")

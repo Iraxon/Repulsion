@@ -4,6 +4,7 @@ class_name RPSNEntity extends CharacterBody2D
 @export var sprint_multiplier := 4.5 # From average human stats
 @export var acceleration := 1612.8 # Half second to/from full sprint
 @export var deceleration_multiplier := 1
+@export var head_offset := Vector2(0, -224) # Used for placing the soul
 
 signal update(delta: float)
 
